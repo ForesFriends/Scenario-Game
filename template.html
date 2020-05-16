@@ -1,0 +1,97 @@
+<html>
+	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<style>
+			table, th, td { 
+				border: 1px solid black;
+			}
+			table.PerformanceTable {
+				table-layout: fixed;
+				width: 50px;
+			}
+		    table.PerformanceTable td.PerformanceCell {
+				width: 30px;
+				}
+			body{
+				
+				background-repeat: no-repeat, repeat;
+			}
+			img{
+				width: 100%;
+				height: 200px;
+				overflow: hidden;
+			}
+			button {
+				width: 100%;
+				height: 200px;
+				padding: 10;
+				overflow: hidden;
+				background: none;
+			}
+			button{
+			  background-color:white;
+			}
+			
+			.correct_highlight {
+				background-color:green
+			}
+			.wrong_highlight {
+				background-color:red
+			}
+			p{
+				 display: block;
+				  margin-top: 1em;
+				  margin-bottom: 1em;
+				  margin-left: 0;
+				  margin-right: 0;
+				  font-size: 25px;
+				  font-family: "Lucida Console", Courier, monospace;
+				  color: red;
+			}
+		</style>
+		<script>
+		$( document ).ready(function() {
+			$("button").click(function(event){
+				console.log($(this))
+				if(($(this)[0].className == 'correct') || ($(this)[0].className == 'correct_highlight')) {
+				$(this)[0].className = 'correct_highlight' 
+				}
+				else {
+					$(this)[0].className = 'wrong_highlight'
+				}
+		});
+		
+		
+		
+		});
+		</script>
+	
+	</head>
+
+	<body>
+		<div>
+		<p> What actually you think is the Destruction of habitat mean!! </p>
+		</div>
+		<div>
+			<table>
+				<tr>
+					<td> <button class="correct"><img src = "images/habitat/fire.jpg"></img></button></td>	
+					<td> <button class="wrong"><img src = "images/habitat/green.jpg"></img></button></td>
+					<td> <button class="correct"><img src = "images/habitat/house.jpg"> </img></button></td>
+				</tr>
+				<tr>
+					<td> <button class="correct"><img src = "images/habitat/housebuild.jpg"></img> </td>
+					<td> <button class="wrong"><img src = "images/habitat/green2.jpg"> </img></td>
+					<td> <button class="correct"><img src = "images/habitat/mine.jpg"> </img></td>
+				</tr>
+				<tr>
+					<td> <button class="correct"><img src = "images/habitat/oil.jpg"> </img></td>
+					<td> <button class="correct"><img src = "images/habitat/trash.jpg"> </img></td>
+					<td> <button class="correct"><img src = "images/habitat/tress.jpg"></img> </td>
+				</tr>
+		</div>
+
+	</body>
+
+
+</html>
